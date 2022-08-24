@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>使用busybox制作rootfs // sy&#39;s blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="sy" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://https:/example.com/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用busybox制作rootfs"/>
+<meta name="twitter:description" content="before you start download busybox and linux kernel source code. create some necessary directories. mkdir initrd cd initrd mkdir {proc,sys,etc} then create init file #!/bin/sh mount -t proc proc /proc mount -t sysfs sysfs /sys mknod /dev/ttyS0 c 4 64 setsid sh -c &#39;exec sh &lt;/dev/ttyS0 &gt;/dev/ttyS0 2&gt;&amp;1&#39; note:
+don&rsquo;t forget to make init executable
+1. compile linux kernel here, I use default configuratonfile, you can tweak it with gui through make menuconfig or manually configure ."/>
+
+    <meta property="og:title" content="使用busybox制作rootfs" />
+<meta property="og:description" content="before you start download busybox and linux kernel source code. create some necessary directories. mkdir initrd cd initrd mkdir {proc,sys,etc} then create init file #!/bin/sh mount -t proc proc /proc mount -t sysfs sysfs /sys mknod /dev/ttyS0 c 4 64 setsid sh -c &#39;exec sh &lt;/dev/ttyS0 &gt;/dev/ttyS0 2&gt;&amp;1&#39; note:
+don&rsquo;t forget to make init executable
+1. compile linux kernel here, I use default configuratonfile, you can tweak it with gui through make menuconfig or manually configure ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://https://example.com/posts/make_a_miniminal_linux_with_busybox/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-22T21:43:34+08:00" />
+<meta property="article:modified_time" content="2022-08-22T21:43:34+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://https://example.com/"><img class="app-header-avatar" src="/example.com/avatar.jpg" alt="sy" /></a>
+      <h1>sy&#39;s blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/example.com/">Home</a>
+             | 
+          
+          <a class="app-header-menu-item" href="/example.com/tags/">Tags</a>
+             | 
+          
+          <a class="app-header-menu-item" href="/example.com/about/">About</a>
+      </nav>
+      <p>爲者常成，行者常至</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">使用busybox制作rootfs</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Aug 22, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h3 id="before-you-start">before you start</h3>
+<ol>
+<li>download <a href="https://busybox.net/">busybox</a> and <a href="https://kernel.org/">linux kernel</a> source code.</li>
+<li>create some necessary directories.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir initrd
+</span></span><span style="display:flex;"><span>cd initrd
+</span></span><span style="display:flex;"><span>mkdir <span style="color:#f92672">{</span>proc,sys,etc<span style="color:#f92672">}</span>
+</span></span></code></pre></div>then create <code>init</code> file
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>mount -t proc proc /proc
+</span></span><span style="display:flex;"><span>mount -t sysfs sysfs /sys
+</span></span><span style="display:flex;"><span>mknod /dev/ttyS0 c <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>setsid sh -c <span style="color:#e6db74">&#39;exec sh &lt;/dev/ttyS0 &gt;/dev/ttyS0 2&gt;&amp;1&#39;</span>
+</span></span></code></pre></div></li>
+</ol>
+<blockquote>
+<p>note:<br>
+don&rsquo;t forget to make <code>init</code> executable</p>
+</blockquote>
+<h3 id="1-compile-linux-kernel">1. compile linux kernel</h3>
+<p>here, I use default configuratonfile, you can tweak it with gui through <code>make menuconfig</code> or manually configure <code>.config</code> file. you can get more help from <code>make help</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make defconfig
+</span></span><span style="display:flex;"><span>make -j <span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>make install
+</span></span></code></pre></div><h3 id="2-compile-busybox">2. compile busybox</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>make defconfig
+</span></span><span style="display:flex;"><span>sed -i <span style="color:#e6db74">&#39;s/#\s*\(CONFIG_STATIC\).*/\1=y/g&#39;</span> .config
+</span></span><span style="display:flex;"><span>make -j <span style="color:#66d9ef">$(</span>nproc<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>make install CONFIG_PREFIX<span style="color:#f92672">=</span>../initrd
+</span></span></code></pre></div><h3 id="3-make-virtual-file-system">3. make virtual file system</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find . | cpio -o -H newc | gzip -9 &gt; initramfs.img
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find . -print0 | cpio -0 -o -H newc | gzip -9 &gt; initramfs.img
+</span></span></code></pre></div><h3 id="4-boot-linux-with-qemu">4. boot linux with qemu</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-system-x86_64 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -kernel kernel/bzImage <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -initrd initrd/initramfs.img <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -nographic <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -append <span style="color:#e6db74">&#34;panic=1 console=ttyS0&#34;</span>
+</span></span></code></pre></div><blockquote>
+<p>alternatively you can pack rootfs into a disk</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of<span style="color:#f92672">=</span>rootfs.img bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>mkfs.ext4 rootfs.img
+</span></span><span style="display:flex;"><span>mkdir rootfs
+</span></span><span style="display:flex;"><span>sudo mount rootfs.img rootfs
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># rootfs directory</span>
+</span></span><span style="display:flex;"><span>mkdir <span style="color:#f92672">{</span>proc,sys<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># busybox directory</span>
+</span></span><span style="display:flex;"><span>make install CONFIG_PREFIX<span style="color:#f92672">=</span>../rootfs
+</span></span><span style="display:flex;"><span>sudo umount rootfs
+</span></span></code></pre></div><p>then boot with <code>qemu</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-system-x86_64 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -kernel kernel/bzImage <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -hda rootfs.img <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -append <span style="color:#e6db74">&#34;root=/dev/sda console=ttyS0&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -nographic
+</span></span></code></pre></div></blockquote>
+<p><strong>method to quit qemu</strong></p>
+<ul>
+<li><code>Ctrl + A</code> then <code>X</code></li>
+<li><code>Ctrl + A</code> then <code>C</code> then type <code>quit</code></li>
+</ul>
+<hr>
+<h3 id="reference">reference</h3>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=asnXWOUKhTA">Build a minimal Linux with only Busybox in 1 hour</a></li>
+<li><a href="https://www.youtube.com/watch?v=c4j6z2huJxs">How to build bare minimal Linux system | Busybox, RAMfs ( initrd ) &amp; system boot with Linux Kernel</a></li>
+<li><a href="https://www.youtube.com/watch?v=MBx3JPgHYfI">Building Bare-Minimum Linux for QEMU</a></li>
+<li><a href="https://www.bilibili.com/video/BV1wg411k7J1?spm_id_from=333.337.search-card.all.click">从头制作一个基于 Busybox 的小型 Linux 系统</a></li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
