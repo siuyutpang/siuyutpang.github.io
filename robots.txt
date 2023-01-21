@@ -1,0 +1,6 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://siuyutpang.xyz/sitemap.xml
+Sitemap: https://siuyutpang.xyz/baidusitemap.xml
