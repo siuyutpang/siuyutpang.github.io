@@ -17,12 +17,6 @@
     font-display:swap
 }
 
-@font-face {
-    font-family:'DTJBT';
-    src:url('/fonts/\'DingTalk JinBuTi.ttf\'') format("truetype");
-    font-display:swap
-}
-
 /* 页脚与头图透明 */
 #footer {
   background: transparent !important;
