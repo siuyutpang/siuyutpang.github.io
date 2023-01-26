@@ -189,8 +189,3 @@ div#archive {
 #nav #search-button {
   float: right;
 }
-
-/* forbid the transformation when hover avatar */
-.avatar-img img:hover {
-  transform: unset;
-}
