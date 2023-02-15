@@ -5,16 +5,12 @@
   --backdrop-filter: blur(5px) saturate(150%);
 }
 
-/* @font-face {
-    font-family:'ComicMono';
-    src:url('/fonts/ComicMono.ttf') format("truetype");
-    font-display:swap
-} */
-
 @font-face {
     font-family:'YSHST';
-    src:url('/fonts/优设好身体.ttf') format("truetype");
-    font-display:swap
+    src:url('/fonts/优设好身体.woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
 /* 页脚与头图透明 */
