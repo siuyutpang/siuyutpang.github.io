@@ -38,6 +38,15 @@
   </url>
   
   <url>
+    <loc>https://www.siuyutpang.xyz/posts/f3fb008f.html</loc>
+    
+    <lastmod>2023-02-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.siuyutpang.xyz/posts/ec44b182.html</loc>
     
     <lastmod>2023-02-26</lastmod>
@@ -84,6 +93,27 @@
   
   <url>
     <loc>https://www.siuyutpang.xyz/tags/linux/</loc>
+    <lastmod>2023-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.siuyutpang.xyz/tags/hexo/</loc>
+    <lastmod>2023-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.siuyutpang.xyz/tags/butterfly/</loc>
+    <lastmod>2023-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.siuyutpang.xyz/tags/blog/</loc>
     <lastmod>2023-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
