@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://siuyutpang.xyz/sitemap.xml
-Sitemap: https://siuyutpang.xyz/baidusitemap.xml
+Sitemap: https://www.siuyutpang.xyz/sitemap.xml
+Sitemap: https://www.siuyutpang.xyz/baidusitemap.xml
