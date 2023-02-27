@@ -3,4 +3,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.siuyutpang.xyz/sitemap.xml
-Sitemap: https://www.siuyutpang.xyz/baidusitemap.xml
