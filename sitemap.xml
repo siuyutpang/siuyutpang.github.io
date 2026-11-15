@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.siuyutpang.xyz/link/index.html</loc>
+    
+    <lastmod>2026-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.siuyutpang.xyz/tags/index.html</loc>
     
     <lastmod>2026-11-15</lastmod>
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/link/index.html</loc>
+    <loc>https://www.siuyutpang.xyz/posts/f3fb008f.html</loc>
     
     <lastmod>2026-11-15</lastmod>
     
@@ -38,15 +47,6 @@
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/posts/f3fb008f.html</loc>
-    
-    <lastmod>2026-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.siuyutpang.xyz/posts/ec44b182.html</loc>
     
     <lastmod>2026-11-15</lastmod>
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/books/index.html</loc>
+    <loc>https://www.siuyutpang.xyz/about/index.html</loc>
     
     <lastmod>2026-11-15</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/about/index.html</loc>
+    <loc>https://www.siuyutpang.xyz/books/index.html</loc>
     
     <lastmod>2026-11-15</lastmod>
     
@@ -92,13 +92,6 @@
 
   
   <url>
-    <loc>https://www.siuyutpang.xyz/tags/linux/</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.siuyutpang.xyz/tags/hexo/</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -114,6 +107,13 @@
   
   <url>
     <loc>https://www.siuyutpang.xyz/tags/blog/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.siuyutpang.xyz/tags/linux/</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -143,14 +143,14 @@
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/categories/tutorial/linux/</loc>
+    <loc>https://www.siuyutpang.xyz/categories/algorithm/</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/categories/algorithm/</loc>
+    <loc>https://www.siuyutpang.xyz/categories/tutorial/linux/</loc>
     <lastmod>2026-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
