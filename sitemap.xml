@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.siuyutpang.xyz/link/index.html</loc>
+    
+    <lastmod>2026-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.siuyutpang.xyz/sites/index.html</loc>
     
     <lastmod>2026-11-15</lastmod>
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/link/index.html</loc>
+    <loc>https://www.siuyutpang.xyz/posts/f530164.html</loc>
     
     <lastmod>2026-11-15</lastmod>
     
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://www.siuyutpang.xyz/books/index.html</loc>
-    
-    <lastmod>2026-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.siuyutpang.xyz/posts/f530164.html</loc>
     
     <lastmod>2026-11-15</lastmod>
     
