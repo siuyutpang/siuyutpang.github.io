@@ -5,16 +5,6 @@
   --backdrop-filter: blur(5px) saturate(150%);
 }
 
-/* Use a slightly heavier font for article text. */
-#article-container {
-  font-weight: 500;
-}
-
-#article-container pre,
-#article-container code {
-  font-weight: 400;
-}
-
 /* 页脚与头图透明 */
 #footer {
   background: transparent !important;
