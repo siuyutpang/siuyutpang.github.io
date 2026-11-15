@@ -1757,7 +1757,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: 'LXGW WenKai Screen', -apple-system, 'PingFang SC', 'Microsoft Yahei', sans-serif;
+  font-family: 'Fantasque Sans Mono', 'LXGW WenKai Screen', -apple-system, 'PingFang SC', 'Microsoft Yahei', sans-serif;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   scroll-behavior: smooth;
@@ -1889,7 +1889,7 @@ a:hover {
 .site-name,
 #aside-content .author-info-name,
 #aside-content .author-info-description {
-  font-family: 'LXGW WenKai Screen', sans-serif;
+  font-family: 'Fantasque Sans Mono', 'LXGW WenKai Screen', sans-serif;
 }
 .text-center {
   text-align: center;
@@ -2450,7 +2450,7 @@ figure.highlight pre .javascript .function {
   height: 100%;
   vertical-align: top;
   text-align: center;
-  font-family: 'LXGW WenKai Screen', sans-serif;
+  font-family: 'Fantasque Sans Mono', 'LXGW WenKai Screen', sans-serif;
 }
 @media screen and (max-width: 768px) {
   .type-404 .error-content .error-info {
