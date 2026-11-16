@@ -5,38 +5,6 @@
   --backdrop-filter: blur(5px) saturate(150%);
 }
 
-@font-face {
-  font-family: 'Fantasque Sans Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/npm/@typopro/web-fantasque-sans-mono@3.7.5/TypoPRO-FantasqueSansMono-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Fantasque Sans Mono';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/npm/@typopro/web-fantasque-sans-mono@3.7.5/TypoPRO-FantasqueSansMono-RegularItalic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Fantasque Sans Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/npm/@typopro/web-fantasque-sans-mono@3.7.5/TypoPRO-FantasqueSansMono-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Fantasque Sans Mono';
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/npm/@typopro/web-fantasque-sans-mono@3.7.5/TypoPRO-FantasqueSansMono-BoldItalic.woff') format('woff');
-}
-
 /* 页脚与头图透明 */
 #footer {
   background: transparent !important;
