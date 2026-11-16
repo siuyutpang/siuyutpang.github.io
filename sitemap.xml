@@ -29,15 +29,6 @@
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/posts/f3fb008f.html</loc>
-    
-    <lastmod>2026-11-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.siuyutpang.xyz/posts/f530164.html</loc>
     
     <lastmod>2026-11-16</lastmod>
@@ -47,7 +38,25 @@
   </url>
   
   <url>
+    <loc>https://www.siuyutpang.xyz/posts/f3fb008f.html</loc>
+    
+    <lastmod>2026-11-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.siuyutpang.xyz/posts/ec44b182.html</loc>
+    
+    <lastmod>2026-11-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.siuyutpang.xyz/about/index.html</loc>
     
     <lastmod>2026-11-16</lastmod>
     
@@ -73,15 +82,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://www.siuyutpang.xyz/about/index.html</loc>
-    
-    <lastmod>2026-11-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://www.siuyutpang.xyz/</loc>
@@ -90,6 +90,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://www.siuyutpang.xyz/tags/linux/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://www.siuyutpang.xyz/tags/hexo/</loc>
@@ -107,13 +114,6 @@
   
   <url>
     <loc>https://www.siuyutpang.xyz/tags/blog/</loc>
-    <lastmod>2026-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.siuyutpang.xyz/tags/linux/</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -143,14 +143,14 @@
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/categories/algorithm/</loc>
+    <loc>https://www.siuyutpang.xyz/categories/tutorial/linux/</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.siuyutpang.xyz/categories/tutorial/linux/</loc>
+    <loc>https://www.siuyutpang.xyz/categories/algorithm/</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
